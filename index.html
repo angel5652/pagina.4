@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>cs</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+      </div>
+      <div class="wrapper">
+         <!-- end loader -->
+         <div class="sidebar">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+               <div id="dismiss">
+                  <i class="fa fa-arrow-left"></i>
+               </div>
+               <ul class="list-unstyled components">
+                  <li class="active">
+                     <a href="index.html">menu</a>
+                  </li>
+                  <li>
+                     <a href="#about">acerca de</a>
+                  </li>
+                  <li>
+                     <a href="#game">juego</a>
+                  </li>
+                  <li>
+                     <a href="#customer">nuestro cliente</a>
+                  </li>
+                  <li>
+                     <a href="#contact">contacto</a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+         <div id="content">
+            <!-- header -->
+            <header>
+               <!-- header inner -->
+               <div class="head_top">
+                  <div class="header">
+                     <div class="container-fluid">
+                        <div class="row">
+                           <div class="col-md-3 logo_section">
+                              <div class="full">
+                                 <div class="center-desk">
+                                    <div class="logo">
+                                       <a href="index.html"><img src="images/logo.png" alt="#"></a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-9">
+                              <div class="right_header_info">
+                                 <ul>
+                                    <li class="menu_iconb">
+                                       <a href="Javascript:void(0)">Login</a>
+                                    </li>
+                                    <li>
+                                       <button type="button" id="sidebarCollapse">
+                                       <img src="images/menu_icon.png" alt="#" />
+                                       </button>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </header>
+            <!-- end header inner -->
+            <!-- end header -->
+            <section class="slider_section">
+               <div class="banner_main">
+                  <img src="data:image/jpeg;base64,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" alt="#"/>
+                  <div class="container-fluid padding3">
+                     <div class="row">
+                        <div class="col-md-12">
+                           <div class="text-bg">
+                              <a href="Javascript:void(0)">jugar</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         <!-- Categories -->
+         <!-- casino -->
+         <div id="game" class="juegos">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="titlepage">
+                        <h2>diferentes juegos</h2>
+                        <span></span>
+                     </div>
+                  </div>
+               </div>
+            
+               <div class="row">
+                  <div class="col-md-4 padding_bottom">
+                     <div class="game_box">
+                        <figure><img src="https://www.mueblesamerica.mx/img/1024/1024/resize/H/A/HASB00081_x1_1.jpg" alt="#"/></figure>
+                     </div>
+                  </div class="game">
+                      <h3>juego 1</h3>
+                   </div>
+                 </div>
+                  <div class="col-md-4 padding_bottom">
+                     <div class="game_box">
+                        <figure><img src="https://www.officedepot.com.mx/medias/515ftw-100183220.jpg?context=bWFzdGVyfHJvb3R8MTM2NDY0fGltYWdlL2pwZWd8YURKbEwyZzVNUzh4TWpJeU1qUTJPVFV3TlRBMU5DODFNVFZtZEhkZk1UQXdNVGd6TWpJd0xtcHdad3w2ZjZkZDk2MjAxMDIxMzY3NjZjZjg0OTNhYTk4MTM3ZTM5ZGY2NjIwNzA0YmE0NTg3YThiZDJkOTMxODUzN2E4" alt="#"/></figure>
+                     </div>
+                     <div class="game">
+                        <h3>juego 2</h3>
+                     </div>
+                  </div>
+                  <div class="col-md-4 padding_bottom">
+                     <div class="game_box">
+                        <figure><img src="https://http2.mlstatic.com/D_Q_NP_905041-MLA96667238391_102025-F.webp" alt="#"/></figure>
+                     </div>
+                     <div class="game">
+                        <h3>juego 3</h3>
+                     </div>
+                  </div>
+                  <div class="col-md-4 margin_bottom1">
+                     <div class="game_box">
+                        <figure><img src="https://deviramericas.com/wp-content/uploads/2020/05/carcassonne-juegos-de-mesa-para-regalar-a-amigos-jugones-1.jpg" alt="#"/></figure>
+                     </div>
+                     <div class="game">
+                        <h3>juego 4</h3>
+                     </div>
+                  </div>
+                  <div class="col-md-4 margin_bottom1">
+                     <div class="game_box">
+                        <figure><img src="https://detqhtv6m6lzl.cloudfront.net/HCLContenido/producto/FullImage/195166218489-1.jpg?h=400" alt="#"/></figure>
+                     </div>
+                     <div class="game">
+                        <h3>juego 5</h3>
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="game_box">
+                        <figure><img src="https://offloadmedia.feverup.com/cdmxsecreta.com/wp-content/uploads/2023/07/21014032/cafeterias-con-juegos-de-mesa-cdmx-1024x683.jpg" alt="#"/></figure>
+                     </div>
+                     <div class="game">
+                        <h3>juego 6</h3>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- end casino -->
+         <!-- licens -->
+         <div class="licens">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="titlepage">
+                        <h2>datos curiosos</h2>
+                        <span></span>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-md-12">
+                     <div id="licens" class="carousel slide licens_Carousel " data-ride="carousel">
+                        <ol class="carousel-indicators">
+                           <li data-target="#licens" data-slide-to="0" class="active"></li>
+                           <li data-target="#licens" data-slide-to="1"></li>
+                           <li data-target="#licens" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                           <div class="carousel-item active">
+                              <div class="container">
+                                 <div class="carousel-caption ">
+                                    <div class="row d_flex">
+                                       <div  class="col-md-6">
+                                          <div class="test_box">
+                                             <div class="jons">
+                                                <h4>divercion</h4>
+                                             </div>
+                                             <p>juega juegos de mesa y pasa mucha divercion.</p>
+                                             <a class="read_more" href="Javascript:void(0)">Play Online</a>
+                                          </div>
+                                       </div>
+                                       <div  class="col-md-6">
+                                          <div class="test_box">
+                                             <div class="jons">
+                                                <figure><img src="images/jons_img1.png" alt="#"/></figure>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="carousel-item">
+                              <div class="container">
+                                 <div class="carousel-caption">
+                                    <div class="row d_flex">
+                                       <div  class="col-md-6">
+                                          <div class="test_box">
+                                             <div class="jons">
+                                                <h4>compra ya</h4>
+                                             </div>
+                                             <p>visita nuestra tienda y compra</p>
+                                             <a class="read_more" href="Javascript:void(0)">Play Online</a>
+                                          </div>
+                                       </div>
+                                       <div  class="col-md-6">
+                                          <div class="test_box">
+                                             <div class="jons">
+                                                <figure><img src="images/jons_img1.png" alt="#"/></figure>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="carousel-item">
+                              <div class="container">
+                                 <div class="carousel-caption">
+                                    <div class="row d_flex">
+                                       <div  class="col-md-6">
+                                          <div class="test_box">
+                                             <div class="jons">
+                                                <h4>descuento</h4>
+                                             </div>
+                                             <p>visita y enseña que vienes de la pagina y te doy descuento
+                                             <a class="read_more" href="Javascript:void(0)">compra
+                                          </div>
+                                       </div>
+                                       <div  class="col-md-6">
+                                          <div class="test_box">
+                                             <div class="jons">
+                                                <figure><img src="images/jons_img1.png" alt="#"/></figure>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#licens" role="button" data-slide="prev">
+                        <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                        </a>
+                        <a class="carousel-control-next" href="#licens" role="button" data-slide="next">
+                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        </a>
+                     </div>
+                     <p class="lorem">pasa mucha divercion con nuestros juegos
+                  </div>
+                  <div id="about" class="col-md-12">
+                     <ul class="spinit">
+                        <li><a href="Javascript:void(0)">divercion
+                        <li><a href="Javascript:void(0)">muchas promociones
+                        <li><a href="Javascript:void(0)">mas de 100 juegos
+                        <li><a href="Javascript:void(0)">adio estres
+                     </ul>
+                     <div class="two_box">
+                        <div class="row d_flex">
+                           <div class="col-md-4">
+                              <div class="many_box_img">
+                                 <figure><img src="
+                              </div>
+                           </div>
+                           <div class="col-md-8">
+                              <div class="many_box">
+                                 <p>compra en nuestra tienda
+                                    ,mucha divercion y muchos jegos para escojer
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- end lLicens -->
+         <!-- customer -->
+         <div id="customer"  class="customer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="titlepage">
+                        <h2>clentes
+                        <span></span>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-md-10 offset-md-1">
+                     <div class="customer_text">
+                        <p>exelente servicio y mucha atencion y muy bien el servicio que dan.</p>
+                        <div class="customer_box">
+                           <i><img src="images/customer.png" alt="#"/></i>
+                           <h4>Mark jo</h4>
+                           <span>jected humour</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- end customer -->
+         <!-- reqeste -->
+         <div id="contact" class="reqeste">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="titlepage">
+                        <h2>informacion</h2>
+                        <span></span>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-md-6 offset-md-3">
+                     <form id="cochang" class="form_main">
+                        <div class="row">
+                           <div class="col-md-12">
+                              <input class="form_control" placeholder="juegos de mesa" type="text" name="Name">
+                           </div>
+                           <div class="col-md-12">
+                              <input class="form_control" placeholder="mas informacion en tienda" type="text" name="Phone number">
+                           </div>
+                           <div class="col-md-12">
+                              <input class="form_control" placeholder="correo" type="text" name="Email">
+                           </div>
+                           <div class="col-md-12">
+                              <input class="form_control" placeholder="al dm" type="text" name="Message">
+                           </div>
+                           <div class="col-md-12">
+                              <button class="send_btn">Send</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- end reqeste -->
+         <!--  footer -->
+         <footer>
+            <div class="footer">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 ">
+                        <div class="address">
+                           <h3>Subscribe Now</h3>
+                           <form class="newtetter">
+                              <button class="submit">submit</button>
+                              <input class="tetter" placeholder="Enter your email" type="text" name="Enter your email">
+                           </form>
+                        </div>
+                     </div>
+                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                        <div class="row">
+                           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                              <div class="address">
+                                 <h3>Links</h3>
+                                 <ul class="Menu_footer">
+                                    <li class="active"> <a href="index.html">Home</a> </li>
+                                    <li><a href="#about">About</a> </li>
+                                    <li><a href="#game">Game</a> </li>
+                                    <li><a href="#customer">customer</a> </li>
+                                    <li><a href="#conatct">Conatct</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                              <div class="address">
+                                 <h3>Contact us</h3>
+                                 <ul class="Links_footer">
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="copyright">
+                  <div class="container">
+                     <p>Copyright 2019 All Right Reserved By <a href="https://html.design/">Free html Templates</a></p>
+                  </div>
+               </div>
+            </div>
+         </footer>
+         <!-- end footer -->
+      </div>
+      <div class="overlay"></div>
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+       <script src="js/custom.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function() {
+             $("#sidebar").mCustomScrollbar({
+                 theme: "minimal"
+             });
+         
+             $('#dismiss, .overlay').on('click', function() {
+                 $('#sidebar').removeClass('active');
+                 $('.overlay').removeClass('active');
+             });
+         
+             $('#sidebarCollapse').on('click', function() {
+                 $('#sidebar').addClass('active');
+                 $('.overlay').addClass('active');
+                 $('.collapse.in').toggleClass('in');
+                 $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+             });
+         });
+      </script>
+      <script>
+         $(document).ready(function() {
+             $(".fancybox").fancybox({
+                 openEffect: "none",
+                 closeEffect: "none"
+             });
+         
+             $(".zoom").hover(function() {
+         
+                 $(this).addClass('transition');
+             }, function() {
+         
+                 $(this).removeClass('transition');
+             });
+         });
+      </script>
+     
+   </body>
+</html>
+
